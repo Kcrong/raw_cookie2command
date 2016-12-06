@@ -20,11 +20,11 @@ else:
     for cookie in raw_cookies.split(';'):
         eq_index = cookie.find('=')
 
-        cookie_command += 'document.cookie="%s=%s";domain="%s";path="/"' % (cookie[:eq_index], cookie[eq_index + 1:], domain)
+        cookie_command += 'document.cookie="%s=%s";domain="%s";path="/";' % (cookie[:eq_index], cookie[eq_index + 1:], domain)
 
     print("------------------------------------")
     print(cookie_command[:-1])
     with open("output_cookie.txt", "w") as f:
-        f.write(cookie_command[:-1])
+        f.write(cookie_command)
     print("\n\n")
     print("By Kcrong :)")
