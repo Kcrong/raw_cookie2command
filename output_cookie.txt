@@ -1,0 +1,1 @@
+document.cookie="a=1";domain=".naver.com";path="/";document.cookie="b=2";domain=".naver.com";path="/";
